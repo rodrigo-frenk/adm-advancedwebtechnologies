@@ -61,17 +61,25 @@ $i = 20;
 ?>
 
 <ul>
-
   <?php
 
   while ( $i > 0 ) {
 
-    echo '<li>' . 'Nos quedan ' . ( $i ) . '</li>';
 
-    $i -= 2;
+     // echo '<li>' . "El valor de 'i' es: " . $i . '</li>';
+   ?>
+
+   <li>
+
+      El valor de 'i' es: <?php echo $i; ?>
+
+   </li>
+
+   <?php
+
+   $i -= 2;
 
   }
 
   ?>
-
 </ul>

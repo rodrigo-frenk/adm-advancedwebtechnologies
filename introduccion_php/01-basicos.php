@@ -1,5 +1,6 @@
 <!-- lo que pongamos aquí es HTML -->
 
+
 <!-- Podemos incluir bloques de PHP: -->
 <?php // Esto es PHP ?>
 
@@ -30,6 +31,7 @@ echo "Un saludo";
 
 // escribir etiquetas
 echo '<br>';
+echo "<br>";
 
 // calcular
 echo 1+8;

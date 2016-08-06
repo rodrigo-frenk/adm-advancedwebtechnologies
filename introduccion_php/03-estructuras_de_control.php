@@ -45,6 +45,8 @@ las condiciones siempre arrojan 'true' o 'false' (valores boolean)
 
 p.ej. (3>1 es 'true', 1==0 es 'false')
 
+
+
 >     Mayor que
 <     Menor que
 >=    Mayor o igual que
@@ -81,8 +83,8 @@ if( $es_viernes == true && $tenemos_varo == true ) {
 
 // ||    operador OR
 
-$queremos_pasear = false;
-$necesitamos_comprar_cosas = true<;
+$queremos_pasear = true;
+$necesitamos_comprar_cosas = true;
 
 
 if( $queremos_pasear || $necesitamos_comprar_cosas ) {
