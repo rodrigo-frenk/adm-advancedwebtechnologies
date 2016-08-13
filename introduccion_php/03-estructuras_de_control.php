@@ -120,8 +120,47 @@ if( $es_viernes ) :
 endif;
 
 
+?>
 
 
+<h2>Switch</h2>
+
+<p>
+   Un switch nos permite realizar diferentes instrucciones dependiendo de un valor
+</p>
+
+
+<?php
+
+// semáforo
+
+$color = "amarillo";
+
+echo "Color: " . $color . '<br>';
+
+switch( $color ) {
+
+   case "rojo" :
+
+      echo "alto total";
+      break;
+
+   case "amarillo" :
+
+      echo "detener el auto";
+      break;
+
+   case "verde" :
+
+      echo "acelerar";
+      break;
+
+   default:
+
+      echo "ese no es un color de semaforo";
+
+
+}
 
 
 

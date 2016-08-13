@@ -9,7 +9,7 @@
          .caja {
 
             /*w50%*/
-            width: 50%;
+            width: 40%;
 
             /*p50*/
             padding: 50px;
@@ -17,8 +17,6 @@
             border:1px solid #DDD;
 
             float: left;
-            box-sizing: border-box;
-
             /*h60vh */
             height: 60vh;
          }
@@ -59,20 +57,22 @@
       }
 
       if( $operacion ) {
+         switch( $operacion ) {
 
-         if( $operacion == "sumar" ) {
-            $resultado = sumar( $numero1, $numero2 );
-         }
-         if( $operacion == "restar" ) {
-            $resultado = restar( $numero1, $numero2 );
-         }
-         if( $operacion == "multiplicar" ) {
-            $resultado = multiplicar( $numero1, $numero2 );
-         }
-         if( $operacion == "dividir" ) {
-            $resultado = dividir( $numero1, $numero2 );
-         }
+            case "sumar" :
+               $resultado = sumar( $numero1, $numero2 );
+               break;
+            case "restar" :
+               $resultado = restar( $numero1, $numero2 );
+               break;
+            case "multiplicar" :
+               $resultado = multiplicar( $numero1, $numero2 );
+               break;
+            case "dividir" :
+               $resultado = dividir( $numero1, $numero2 );
+               break;
 
+         }
       }
 
       function sumar( $a, $b ) {
@@ -119,24 +119,7 @@
             <!-- (label[for=operacion$]{Operacion $}+input[name=operacion][type=checkbox][value=operacion$])*4 -->
 
 
-                                          <?php
-                                          /*
-                                          # Sintaxis Abreviada para "IF":
-                                          # En vez de escribir:
 
-                                          $condicion = $a > $b;
-
-                                          if( $condicion ) {
-                                             echo "algo";
-                                          } else {
-                                             echo "otra cosa";
-                                          }
-
-                                          # Podemos abreviarlo:
-
-                                          echo $condicion ? "algo" : "otra cosa";
-
-                                          */ ?>
             <label for="sumar">Sumar</label>
             <input type="radio" name="operacion" value="sumar" <?php echo $operacion=='sumar' ? 'checked' : ''; ?>>
 
@@ -149,6 +132,24 @@
             <label for="dividir">Dividir</label>
             <input type="radio" name="operacion" value="dividir" <?php echo $operacion=='dividir' ? 'checked' : ''; ?>>
 
+            <?php
+            /*
+            # Sintaxis Abreviada para "IF":
+            # En vez de escribir:
+
+            $condicion = $a > $b;
+
+            if( $condicion ) {
+               echo "algo";
+            } else {
+               echo "otra cosa";
+            }
+
+            # Podemos abreviarlo:
+
+            echo $condicion ? "algo" : "otra cosa";
+
+            */ ?>
 
          </fieldset>
 

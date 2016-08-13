@@ -36,7 +36,7 @@
       ?>
 
 
-      <h3>Realizando cálculos básicos</h3>
+      <h3>Realizando calculos basicos</h3>
 
 
       <?php
@@ -96,6 +96,7 @@
 
       }
 
+      echo "El valor mas grande es: ";
       echo arrojar_valor_mas_grande( 10, 7 );
 
 
