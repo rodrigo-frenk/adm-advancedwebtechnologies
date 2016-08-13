@@ -1,5 +1,6 @@
 <h1>Arreglos o <i>Arrays</i></h1>
 
+
 <?php
 
 /*
@@ -8,7 +9,32 @@ Un arreglo es un conjunto de datos que están almacenados secuencialmente
 
 */
 
+?>
 
+<h3>Arreglo sencillo</h3>
+<?php
+
+
+
+$frutas = array(
+  'Manzana',
+  'Naranja',
+  'Uva',
+  'Fresa',
+  'Sandía'
+);
+
+
+echo 'La primera fruta es: ' . $frutas[ 0 ];
+echo '<br>';
+echo 'La cuarta fruta es: ' . $frutas[ 3 ];
+
+?>
+
+
+<h2>Mostrando todos los contenidos</h2>
+
+<?php
 $numeros_primos_menores_a_20 = array(
    1,
    3,
@@ -24,10 +50,6 @@ $numeros_primos_menores_a_20 = array(
 
 
 ?>
-
-<h2>
-   Mostrando contenidos de un arreglo
-</h2>
 
 
 <ul>
@@ -60,20 +82,6 @@ $numeros_primos_menores_a_20 = array(
 
 
 
-$frutas = array(
-  'Manzana',
-  'Naranja',
-  'Uva',
-  'Fresa',
-  'Sandía'
-);
-
-
-echo 'La primera fruta es: ' . $frutas[ 0 ];
-echo '<br>';
-echo 'La cuarta fruta es: ' . $frutas[ 3 ];
-
-
 ?>
 
 <br>
@@ -100,7 +108,9 @@ $frutas = array(
   'Fresa',
   'Sandía',
   'Kiwi',
-  'Guanábana'
+  'Guanábana',
+  'Piña',
+  'Papaya'
 );
 
 
@@ -141,6 +151,7 @@ foreach ($alumnos as $alumno ) {
 
 <h3>Iterando con <b>foreach</b></h3>
 <?php
+
 
 
 foreach ( $frutas as $una_fruta ) {
@@ -216,8 +227,8 @@ $persona1 = array(
 
 
 // presentación en frontend
-$texto = $persona1['apellido'] . ', ' . $persona1['nombre'];
-$texto .= '. ' . $persona1['edad'] . ' anhos. ';
+$texto = $persona1['apellido'] . ', ' . $persona1['nombre'] . '. ';
+$texto .= $persona1['edad'] . ' anhos. ';
 $texto .= $persona1['ocupacion'] . '.';
 
 echo $texto;
@@ -236,25 +247,37 @@ echo '<br>';
 <?php
 
 
+$persona1 = array(
+  'nombre'    => 'Jose Antonio',
+  'apellido'  => 'Gutierrez Jimenez',
+  'edad'      => 32,
+  'ocupacion' => 'Cocinero',
+  'imagen'    => 'avatar1.jpg'
+);
+
+
 $persona2 = array(
   'nombre'    => 'Luis Ernesto',
   'apellido'  => 'Torres Perez',
   'edad'      => 25,
-  'ocupacion' => 'Estudiante'
+  'ocupacion' => 'Estudiante',
+  'imagen'    => 'avatar2.jpg'
 );
 
 $persona3 = array(
   'nombre'    => 'Alondra',
   'apellido'  => 'Perez Perez',
   'edad'      => 23,
-  'ocupacion' => 'Estudiante'
+  'ocupacion' => 'Estudiante',
+  'imagen'    => 'avatar3.jpg'
 );
 
 $persona4 = array(
   'nombre'    => 'Pedro',
   'apellido'  => 'García Esquivel',
   'edad'      => 29,
-  'ocupacion' => 'Contador'
+  'ocupacion' => 'Contador',
+  'imagen'    => 'avatar4.jpg'
 );
 
 
@@ -265,6 +288,8 @@ $personas = array(
    $persona4
 );
 
+
+$carpeta_imgs = 'imgs/';
 
 
 
@@ -277,11 +302,12 @@ $personas = array(
       <li>
 
          <?php
-
-         $texto = $una_persona['apellido'] . ', ' . $una_persona['nombre'];
-         $texto .= '. ' . $una_persona['edad'] . ' anhos. ';
-         $texto .= $una_persona['ocupacion'] . '.';
-         echo $texto;
+         // $una_persona['imagen']
+         $html = '<img src="' . $carpeta_imgs . $una_persona['imagen'] . '" alt="" style="width:100px"/>';
+         $html .= $una_persona['apellido'] . ', ' . $una_persona['nombre'];
+         $html .= '. ' . $una_persona['edad'] . ' anhos. ';
+         $html .= $una_persona['ocupacion'] . '.';
+         echo $html;
 
          ?>
 

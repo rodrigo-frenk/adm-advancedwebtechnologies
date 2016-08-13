@@ -9,7 +9,6 @@ para generar dinámicamente una plantilla de Blog
 
 
 for( $i = 0;  $i < 10; $i++ ) {
-   // while ( $i < 10 ) {
 
    $titulo = "Titulo de la Entrada " . ($i+1);
    ?>
