@@ -1,0 +1,30 @@
+Instalación de Wordpress
+
+
+1. Descargar el .zip desde wordpress.org (o es.wordpress.org o es-mx.wordpress.org)
+
+2. Extraerlo en el directorio deseado (en este caso dentro de htdocs/cursoweb)
+
+3. Modificar el nombre del directorio 'wordpress' por el de nuestro proyecto (p. ej. 'mi_wp')
+
+4. Apuntar Navegador Web a http://localhost/cursoweb/mi_wp y verificar que está presente
+
+5. Preparar base de datos: localhost/phpmyadmin (hacer login si lo requiere)
+
+6. Crear una base de datos nueva (p. ej. "mi_wp")
+
+7. Crear usuario para dicha base de datos (pestaña "Privilegios" -› añadir usuario )
+
+username: mi_wp_user
+server:   localhost
+password: abc
+
+8. Volver al navegador y seguir en instalador de Wordpress. Nos pide los datos anteriores
+
+
+username: mi_wp_user
+server:   localhost
+password: abc
+prefijo de tabla: miwp_ (importante cambiarlo!)
+
+9. Seguir las instrucciones del Instalador de Wordpress.

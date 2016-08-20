@@ -1,0 +1,13 @@
+* {
+  outline: 1px solid #def;
+}
+
+
+
+.tercio-pantalla {
+  height: 33.33vh;
+}
+
+.mitad-pantalla {
+  height: 50vh;
+}

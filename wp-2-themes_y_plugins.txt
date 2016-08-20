@@ -1,0 +1,25 @@
+Instalación de Themes:
+
+0. Descargar y extraer el theme
+
+1. Colocar el directorio del Theme dentro de /directorio/a/mi/wordpress/wp-content/themes
+
+2. Ir a panel 'Apariencia'
+
+3. Elegir Theme
+
+
+
+
+
+Instalación de Plugins:
+
+0. Descargar y extraer el plugin
+
+1. Colocar el directorio del Plugin dentro de /directorio/a/mi/wordpress/wp-content/plugins
+
+2. Ir a panel 'Plugins'
+
+3. Activar Plugin
+
+4. Algunos Plugins tienen Panel de Configuración
