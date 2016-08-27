@@ -7,7 +7,8 @@
   </title>
 
 
-  <!-- cargaremos los recursos en functions.php:
+  <!-- normalemnte cargariamos aquí los css, pero ahora cargaremos los recursos
+   en functions.php:
   <link rel="stylesheet" href="...">
   por ejemplo:
   <link rel="stylesheet" href="recursos/bootstrap-3.3.7-dist/css/bootstrap.min.css">
@@ -31,25 +32,35 @@
     <!-- nav#menu_principal -->
     <nav id="menu_principal">
 
+      <h3>Menú automático:</h3>
+
       <?php
-      /*
-      $paginas = get_pages();
+      $inicio = get_page_by_title( "Inicio" );
+
+      $paginas = get_pages(
+         array(
+            'parent' => $inicio -> ID
+         )
+      );
 
       foreach( $paginas as $pagina ) :
 
-      ?>
+         ?>
 
-      <li>
-        <a href="<?php echo get_the_permalink( $pagina -> ID ); ?>">
-          <?php echo $pagina -> post_title; ?>
-        </a>
-      </li>
+         <li>
+           <a href="<?php echo get_the_permalink( $pagina -> ID ); ?>">
+             <?php echo $pagina -> post_title; ?>
+           </a>
+         </li>
 
-      <?php
+         <?php
 
       endforeach;
-      */
+
       ?>
+
+
+      <h3>Menú desde wordpress:</h3>
 
       <?php wp_nav_menu( array( 'theme_location' => 'menu-principal' ) ); ?>
 

@@ -1,30 +1,32 @@
 <?php get_header(); ?>
 
- <!-- #slider.container-fluid.mitad-pantalla -->
- <div id="slider" class="container-fluid mitad-pantalla">
+ <!-- section#slider.container-fluid.mitad-pantalla -->
+ <section id="slider" class="container-fluid mitad-pantalla">
 
-   <!-- .slide.imagen.imgLiquid.imgLiquidFill -->
-   <div class="slide imagen imgLiquid imgLiquidFill mitad-pantalla">
-     <img src="http://fakeimg.pl/1200x500" alt="" />
-   </div>
-
-   <!-- .slide.imagen.imgLiquid.imgLiquidFill -->
-   <div class="slide imagen imgLiquid imgLiquidFill mitad-pantalla">
-     <img src="http://fakeimg.pl/1200x500" alt="" />
-   </div>
-
-   <!-- .slide.imagen.imgLiquid.imgLiquidFill -->
-   <div class="slide imagen imgLiquid imgLiquidFill mitad-pantalla">
-     <img src="http://fakeimg.pl/1200x500" alt="" />
-   </div>
-
- </div>
 
 
    <?php
 
+      if( have_posts() ) :
+         while ( have_posts() ) :
+            the_post();
+
+            ?>
+
+            <!-- .slide.imagen.imgLiquid.imgLiquidFill -->
+            <div class="slide imagen imgLiquid imgLiquidFill mitad-pantalla">
+              <?php echo get_the_post_thumbnail(); ?>
+            </div>
+
+            <?php
+         endwhile;
+      endif;
+   ?>
+
+ </section>
 
 
+   <?php
 
          if( have_posts() ) :
             while ( have_posts() ) :
@@ -65,8 +67,7 @@
                <?php
 
             endwhile;
-         else :
-            /* No posts found */
+
          endif;
 
 
