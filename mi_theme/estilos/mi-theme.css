@@ -12,6 +12,17 @@
   height: 50vh;
 }
 
+
+/* layout */
+
+
+main > section {
+
+   margin-bottom: 50px;
+
+}
+
+
 /* home: */
 .entrada_home {
    padding: 30px;
