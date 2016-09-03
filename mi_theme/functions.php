@@ -55,4 +55,23 @@ add_action( 'wp_enqueue_scripts', 'cargar_recursos' );
 
 
 
+
+
+
+
+
+add_action( 'widgets_init', 'mi_theme_widgets_init' );
+function mi_theme_widgets_init() {
+    register_sidebar( array(
+        'name' => __( 'Barra Lateral', 'mi_theme' ),
+        'id' => 'sidebar-1',
+        'description' => __( 'Los widgets que coloques aquí se mostrarán en los posts.', 'theme-slug' ),
+        'before_widget' => '<li id="%1$s" class="widget %2$s">',
+	'after_widget'  => '</li>',
+	'before_title'  => '<h2 class="widgettitle">',
+	'after_title'   => '</h2>',
+    ) );
+}
+
+
 ?>

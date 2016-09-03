@@ -1,4 +1,5 @@
 <?php
+/* Template Name: Inicio */
 
 get_header();
 
