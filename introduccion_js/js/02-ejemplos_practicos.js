@@ -86,37 +86,40 @@ $(document).ready(function(){
 
       var direccion;
 
-      if( $(window).scrollTop() < scroll_anterior ) {
+      var scroll_ventana = $(window).scrollTop();
+
+      if( scroll_ventana < scroll_anterior ) {
          direccion = "arriba";
       } else {
          direccion = "abajo";
       }
-      scroll_anterior = $(window).scrollTop();
+      scroll_anterior = scroll_ventana;
 
-      if( scroll_anterior > 100 ) {
+      if( scroll_ventana > 100 ) {
 
-               $('#cabecera').css({
-                  position:'fixed'
-               })
+         $('#cabecera').css({
+            position:'fixed'
+         })
 
-               if( direccion == "abajo" ) {
+         if( direccion == "abajo" ) {
 
 
-                  setTimeout(function(){
+            setTimeout(function(){
 
-                     $('#cabecera').stop().animate({
-                        marginTop: -$('#cabecera').height()
-                     }, 500)
+               $('#cabecera').stop().animate({
+                  marginTop: -$('#cabecera').height()
+               }, 500)
 
-                  }, 800 );
+            }, 800 );
 
-               } else {
+         } else {
 
-                     $('#cabecera').stop().animate({
-                        marginTop: 0
-                     }, 500)
+               $('#cabecera').stop().animate({
+                  marginTop: 0
+               }, 500)
 
-               }
+         }
+
       } else {
          $('#cabecera').css({
             position:'relative'
