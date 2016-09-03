@@ -23,9 +23,22 @@
          ?>
 
          <!-- .slide.imagen.imgLiquid.imgLiquidFill -->
-         <div class="slide imagen imgLiquid imgLiquidFill mitad-pantalla">
-            <?php echo get_the_post_thumbnail(); ?>
+         <div class="slide mitad-pantalla rel">
+
+            <div class="imagen abs z0 w100 h100 imgLiquid imgLiquidFill">
+               <?php echo get_the_post_thumbnail(); ?>
+            </div>
+
+            <div class="texto abs z1 texto-flotante">
+               <h2>
+                  <?php echo get_the_title(); ?>
+               </h2>
+            </div>
+
          </div>
+
+
+
 
          <?php
       endwhile;

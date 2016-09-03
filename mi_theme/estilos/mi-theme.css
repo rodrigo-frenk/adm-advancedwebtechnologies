@@ -28,3 +28,44 @@ main > section {
    padding: 30px;
    background-color: #def;
 }
+
+
+
+
+.rel {
+   position: relative;
+}
+
+.abs {
+   position: absolute;
+}
+
+
+
+.w100 {
+   width: 100%;
+}
+
+.h100 {
+   height: 100%;
+}
+
+
+
+
+.z0 {
+   z-index: 0;
+}
+
+
+.z1 {
+   z-index: 1;
+}
+
+.texto-flotante {
+   color: white;
+   text-shadow: 2px 2px 2px rgba(0,0,0,0.5);
+   padding: 30px;
+   /*background-color: rgba(0,0,0,0.5);*/
+
+}
