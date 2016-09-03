@@ -1,5 +1,4 @@
 <?php
-
 get_header();
 
 if( have_posts() ) :
@@ -9,7 +8,7 @@ if( have_posts() ) :
       ?>
 
       <!-- article#articulo_x.articulo -->
-      <article id="articulo_<?php echo get_the_ID(); ?>" class="entrada_home col-md-8 col-lg-9">
+      <article id="articulo_<?php echo get_the_ID(); ?>" class="entrada_home">
 
             <header>
 
@@ -41,16 +40,6 @@ else :
    /* No posts found */
 endif;
 
-?>
-
-<!-- aside.col-md-4.col-md-3 -->
-<aside class="col-md-4 col-md-3">
-
-   Barra Lateral
-
-</aside>
-
-<?php
 
 get_footer();
 

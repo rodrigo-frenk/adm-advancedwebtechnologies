@@ -1,10 +1,14 @@
 <?php get_header(); ?>
 
-<section id="archive-entradas" class="container-fluid">
+<section id="fotografia-entradas" class="container-fluid">
 
    <h1>
       <?php echo get_the_archive_title(); ?>
    </h1>
+
+   <p>
+      <?php echo category_description(); ?>
+   </p>
 
    <?php
 
@@ -15,9 +19,14 @@
          ?>
 
          <!-- article#articulo_x.articulo -->
-         <article id="articulo_<?php echo get_the_ID(); ?>" class="entrada_home col-sm-6 col-md-4">
+         <article id="articulo_<?php echo get_the_ID(); ?>" class="entrada_home col-md-6">
 
             <a href="<?php echo get_the_permalink( get_the_ID() ); ?>">
+
+               <section class="imagen imgLiquid imgLiquidFill mitad-pantalla">
+                  <?php echo get_the_post_thumbnail(); ?>
+               </section>
+
 
                <header>
 
@@ -31,9 +40,7 @@
 
                </header>
 
-               <section class="imagen imgLiquid imgLiquidFill tercio-pantalla">
-                  <?php echo get_the_post_thumbnail(); ?>
-               </section>
+
 
                <!-- section.extracto -->
                <section class="extracto">

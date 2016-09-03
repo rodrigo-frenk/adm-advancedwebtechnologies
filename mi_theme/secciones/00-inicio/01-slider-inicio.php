@@ -29,6 +29,9 @@
                <?php echo get_the_post_thumbnail(); ?>
             </div>
 
+            <!-- .cortina.cortina-negra.z0.abs.w100.h100 -->
+            <div class="cortina cortina-negra z0 abs w100 h100"></div>
+
             <div class="texto abs z1 texto-flotante">
                <h2>
                   <?php echo get_the_title(); ?>

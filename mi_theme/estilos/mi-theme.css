@@ -57,10 +57,10 @@ main > section {
    z-index: 0;
 }
 
-
 .z1 {
    z-index: 1;
 }
+
 
 .texto-flotante {
    color: white;
@@ -68,4 +68,10 @@ main > section {
    padding: 30px;
    /*background-color: rgba(0,0,0,0.5);*/
 
+}
+
+
+
+.cortina-negra {
+   background-color: rgba(0,0,0,0.3);
 }
