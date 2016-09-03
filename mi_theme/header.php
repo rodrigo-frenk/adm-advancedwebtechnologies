@@ -39,7 +39,7 @@
 
       $paginas = get_pages(
          array(
-            'parent' => $inicio -> ID
+            'parent' => $inicio -> ID,            
          )
       );
 
